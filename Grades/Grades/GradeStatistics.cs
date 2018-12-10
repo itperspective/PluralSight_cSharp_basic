@@ -17,5 +17,35 @@ namespace Grades
             HighestGrade = 0;
             LowestGrade = float.MaxValue;
         }
+
+        public string LetterGrade
+        {
+            get
+            {
+                string result;
+                if (AvarageGrade >=90)
+                {
+                    result = "A";
+                }
+                else if (AvarageGrade>=80)
+                {
+                    result = "B";
+                }
+                else if (AvarageGrade>=70)
+                {
+                    result = "C";
+                }
+                else if (AvarageGrade >= 60)
+                {
+                    result = "D";
+                }
+                else
+                {
+                    result = "F";
+                }
+
+                return result;
+            }
+        }
     }
 }
